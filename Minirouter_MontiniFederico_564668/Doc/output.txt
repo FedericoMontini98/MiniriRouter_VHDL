@@ -1,0 +1,207 @@
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****No request****
+New Cycle
+    Data first Link: "0001101101"
+    Req: 1
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 01
+    Priority of Second Link: 00
+    ****Single Request on first link****
+    --->data_out: 00011011
+    --->valid: 1
+    --->grant_1: 1
+    --->grant_2: 0
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0110100101"
+    Req: 1
+    Priority of First Link: 00
+    Priority of Second Link: 01
+    ****Single Request on second link****
+    --->data_out: 01101001
+    --->valid: 1
+    --->grant_1: 0
+    --->grant_2: 1
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****No request****
+New Cycle
+    Data first Link: "0110111101"
+    Req: 1
+    Data second Link: "0110000101"
+    Req: 1
+    Priority of First Link: 01
+    Priority of Second Link: 01
+    ****Double request****
+    ****Same Priority****
+    ****RoundRobin Algorthm chooses link n° 1****
+    --->data_out: 01101111
+    --->valid: 1
+    --->grant_1: 1
+    --->grant_2: 0
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0110000101"
+    Req: 1
+    Priority of First Link: 00
+    Priority of Second Link: 01
+    ****Single Request on second link****
+    --->data_out: 01100001
+    --->valid: 1
+    --->grant_1: 0
+    --->grant_2: 1
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****No request****
+New Cycle
+    Data first Link: "1101001010"
+    Req: 1
+    Data second Link: "1101011110"
+    Req: 1
+    Priority of First Link: 10
+    Priority of Second Link: 10
+    ****Double request****
+    ****Same Priority****
+    ****RoundRobin Algorthm chooses link n° 2****
+    --->data_out: 11010111
+    --->valid: 1
+    --->grant_1: 0
+    --->grant_2: 1
+New Cycle
+    Data first Link: "1101001010"
+    Req: 1
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 10
+    Priority of Second Link: 00
+    ****Single Request on first link****
+    --->data_out: 11010010
+    --->valid: 1
+    --->grant_1: 1
+    --->grant_2: 0
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****No request****
+New Cycle
+    Data first Link: "0010100101"
+    Req: 1
+    Data second Link: "0110010010"
+    Req: 1
+    Priority of First Link: 01
+    Priority of Second Link: 10
+    ****Double request****
+    ****Link 2 has higher pririty****
+    --->data_out: 01100100
+    --->valid: 1
+    --->grant_1: 0
+    --->grant_2: 1
+New Cycle
+    Data first Link: "0010100101"
+    Req: 1
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 01
+    Priority of Second Link: 00
+    ****Single Request on first link****
+    --->data_out: 00101001
+    --->valid: 1
+    --->grant_1: 1
+    --->grant_2: 0
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****No request****
+New Cycle
+    Data first Link: "0010100110"
+    Req: 1
+    Data second Link: "1000101001"
+    Req: 1
+    Priority of First Link: 10
+    Priority of Second Link: 01
+    ****Double request****
+    ****Link 1 has higher pririty****
+    --->data_out: 00101001
+    --->valid: 1
+    --->grant_1: 1
+    --->grant_2: 0
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "1000101001"
+    Req: 1
+    Priority of First Link: 00
+    Priority of Second Link: 01
+    ****Single Request on second link****
+    --->data_out: 10001010
+    --->valid: 1
+    --->grant_1: 0
+    --->grant_2: 1
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****No request****
+New Cycle
+    Data first Link: "1010010000"
+    Req: 1
+    Data second Link: "0100101011"
+    Req: 1
+    Priority of First Link: 00
+    Priority of Second Link: 11
+    ****Double request****
+    ****Link 2 has higher pririty****
+    --->data_out: 01001010
+    --->valid: 1
+    --->grant_1: 0
+    --->grant_2: 1
+New Cycle
+    Data first Link: "1010010000"
+    Req: 1
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****Single Request on first link****
+    --->data_out: 10100100
+    --->valid: 1
+    --->grant_1: 1
+    --->grant_2: 0
+New Cycle
+    Data first Link: "0000000000"
+    Req: 0
+    Data second Link: "0000000000"
+    Req: 0
+    Priority of First Link: 00
+    Priority of Second Link: 00
+    ****No request****

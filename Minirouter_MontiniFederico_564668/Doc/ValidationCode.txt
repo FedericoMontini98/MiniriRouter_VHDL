@@ -1,0 +1,83 @@
+granted_1=0
+granted_2=0
+grant_1=0
+grant_2=0
+req_1=0
+req_2=0
+rr=0
+data_out=0
+valid=0
+inputFile=pd.read_csv('input.csv',delimiter=';')
+
+#Link_1 Output Function
+def link_1_out():
+    data_out=data_1[1:9]
+    valid=1
+    granted_1=1
+    grant_1=granted_1
+    granted_2=0
+    grant_2=granted_2
+    print("    --->data_out: " + data_out + "\n    --->valid: " + str(valid) 
+          +"\n    --->grant_1: "+ str(granted_1)+"\n    --->grant_2: "+str(granted_2))
+
+#Link_2 Output Function
+def link_2_out():
+    data_out=data_2[1:9]
+    valid=1
+    granted_2=1
+    grant_2=granted_2
+    granted_1=0
+    grant_1=granted_1
+    print("    --->data_out: " + data_out + "\n    --->valid: " + str(valid) + 
+          "\n    --->grant_1: "+str(granted_1) +"\n    --->grant_2: "+str(granted_2))
+
+#Main body   
+import sys
+import os
+import csv
+import pandas as pd
+
+initial_row=0
+i=0
+for i in range(19):
+    print("New Cycle")
+    data_1=inputFile.iloc[initial_row,1]
+    req_1=inputFile.iloc[initial_row,0]
+    print("    Data first Link: " + data_1 +"\n    Req: " + str(req_1))
+    initial_row=initial_row+1
+    data_2=inputFile.iloc[initial_row,1]
+    req_2=inputFile.iloc[initial_row,0]
+    initial_row=initial_row+1
+    print("    Data second Link: "+ data_2 +"\n    Req: " + str(req_2))
+    priority_1=data_1[9]+data_1[10]
+    priority_2=data_2[9]+data_2[10]
+    print("    Priority of First Link: " + priority_1)
+    print("    Priority of Second Link: " + priority_2)
+    if (req_1==1 and grant_1==0)and(req_2==1 and grant_2==0):
+        print("    ****Double request****")
+        if priority_1==priority_2:
+            print("    ****Same Priority****")
+            if rr==0:
+                print("    ****RoundRobin Algorthm chooses link n° 1****")
+                rr=1
+                link_1_out()
+            else:
+                print("    ****RoundRobin Algorthm chooses link n° 2****")
+                rr=0
+                link_2_out()
+        elif (req_1==1 and req_2==0) or priority_1>priority_2 :
+            print("    ****Link 1 has higher pririty****")
+            link_1_out()
+        else:
+            print("    ****Link 2 has higher pririty****")
+            link_2_out()
+    elif (req_1==1 and grant_1==0)and(req_2==0):
+        print("    ****Single Request on first link****")
+        link_1_out()
+    elif (req_2==1 and grant_2==0) and(req_1==0):
+        print("    ****Single Request on second link****")
+        link_2_out()
+    else:
+        print("    ****No request****")
+        
+ 
